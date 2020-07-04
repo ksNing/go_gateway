@@ -9,20 +9,20 @@ import (
 )
 
 type RedisFlowCountService struct {
-	AppID  string
-	Interval  time.Duration
-	QPS    int64
-	Unix   int64
-	TickerCount  int64
+	AppID       string
+	Interval    time.Duration
+	QPS         int64
+	Unix        int64
+	TickerCount int64
 	TotalCount  int64
 }
 
 func NewRedisFlowCountService(appID string, interval time.Duration) *RedisFlowCountService {
 	reqCounter := &RedisFlowCountService{
-		AppID: appID,
+		AppID:    appID,
 		Interval: interval,
-		QPS:   0,
-		Unix:  0,
+		QPS:      0,
+		Unix:     0,
 	}
 
 	go func() {
@@ -45,13 +45,13 @@ func NewRedisFlowCountService(appID string, interval time.Duration) *RedisFlowCo
 				c.Send("INCRBY", hourKey, tickerCount)
 				c.Send("EXPIRE", hourKey, 86400*2)
 			}); err != nil {
-				fmt.Println("RedisConfPipline err",err)
+				fmt.Println("RedisConfPipline err", err)
 				continue
 			}
 
 			totalCount, err := reqCounter.GetDayData(currentTime)
 			if err != nil {
-				fmt.Println("reqCounter.GetDayData err",err)
+				fmt.Println("reqCounter.GetDayData err", err)
 				continue
 			}
 			nowUnix := time.Now().Unix()
@@ -68,23 +68,24 @@ func NewRedisFlowCountService(appID string, interval time.Duration) *RedisFlowCo
 
 		}
 	}()
+	return reqCounter
 }
 
 func (o *RedisFlowCountService) GetDayKey(t time.Time) string {
 	dayStr := t.In(lib.TimeLocation).Format("20060102")
-	return fmt.Sprintf("%s_%s_%s",RedisFlowDayKey, dayStr,o.AppID)
+	return fmt.Sprintf("%s_%s_%s", RedisFlowDayKey, dayStr, o.AppID)
 }
 
 func (o *RedisFlowCountService) GetHourKey(t time.Time) string {
 	hourStr := t.In(lib.TimeLocation).Format("2006010215")
-	return fmt.Sprintf("%s_%s_%s",RedisFlowHourKey, hourStr,o.AppID)
+	return fmt.Sprintf("%s_%s_%s", RedisFlowHourKey, hourStr, o.AppID)
 }
 
-func (o *RedisFlowCountService) GetHourData(t time.Time) (int64,error) {
+func (o *RedisFlowCountService) GetHourData(t time.Time) (int64, error) {
 	return redis.Int64(RedisConfDo("GET", o.GetHourKey(t)))
 }
 
-func (o *RedisFlowCountService) GetDayData(t time.Time) (int64,error) {
+func (o *RedisFlowCountService) GetDayData(t time.Time) (int64, error) {
 	return redis.Int64(RedisConfDo("GET", o.GetDayKey(t)))
 }
 

@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8b45f93-b397-453d-9bb5-f61042ca1a1d" name="Default Changelist" comment="">
+    <list default="true" id="e8b45f93-b397-453d-9bb5-f61042ca1a1d" name="Default Changelist" comment="新增流量统计功能中间件">
+      <change afterPath="$PROJECT_DIR$/http_proxy_middleware/http_flow_count.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http_proxy_router/route.go" beforeDir="false" afterPath="$PROJECT_DIR$/http_proxy_router/route.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/go_gateway.inf.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/go_gateway.inf.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/const.go" beforeDir="false" afterPath="$PROJECT_DIR$/public/const.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/flow_count_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/public/flow_count_handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/redis_flow_count.go" beforeDir="false" afterPath="$PROJECT_DIR$/public/redis_flow_count.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +31,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/http_proxy_router/route.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+              <folding>
+                <element signature="e#27#112#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dao/service_load_balance.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="447">
@@ -33,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/flow_count_handler.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="74">
+              <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
               <folding>
                 <element signature="e#23#49#0" expanded="true" />
               </folding>
@@ -48,8 +66,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/redis_flow_count.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            <state relative-caret-position="-25">
+              <caret line="66" column="13" lean-forward="true" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/http_proxy_middleware/http_flow_count.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/const.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -126,16 +162,18 @@
         <option value="$PROJECT_DIR$/public/util.go" />
         <option value="$PROJECT_DIR$/http_proxy_middleware/http_black_list.go" />
         <option value="$PROJECT_DIR$/http_proxy_middleware/http_white_list.go" />
-        <option value="$PROJECT_DIR$/http_proxy_router/route.go" />
-        <option value="$PROJECT_DIR$/public/const.go" />
         <option value="$PROJECT_DIR$/public/redis.go" />
-        <option value="$PROJECT_DIR$/public/redis_flow_count.go" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/public/flow_count_handler.go" />
+        <option value="$PROJECT_DIR$/public/const.go" />
+        <option value="$PROJECT_DIR$/http_proxy_router/route.go" />
+        <option value="$PROJECT_DIR$/public/redis_flow_count.go" />
+        <option value="$PROJECT_DIR$/http_proxy_middleware/http_flow_count.go" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
+    <option name="x" value="21" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="724" />
@@ -152,6 +190,21 @@
             <path>
               <item name="go_gateway" type="b2602c69:ProjectViewProjectNode" />
               <item name="go_gateway" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="go_gateway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go_gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="http_proxy_middleware" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="go_gateway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go_gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="http_proxy_router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="go_gateway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go_gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="go_gateway" type="b2602c69:ProjectViewProjectNode" />
@@ -239,12 +292,12 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="201" y="23" width="1280" height="724" extended-state="0" />
+    <frame x="21" y="23" width="1280" height="724" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1930533" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.47626582" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.25632912" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50080776" side_tool="true" weight="0.48356164" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -264,6 +317,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="edit readme.md" />
+    <MESSAGE value="新增流量统计功能中间件" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增流量统计功能中间件" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -391,23 +449,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/middleware/translation.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1321">
-          <caret line="134" column="23" selection-start-line="134" selection-start-column="23" selection-end-line="134" selection-end-column="23" />
-          <folding>
-            <element signature="e#20#409#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/params.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/go/src/net/http/server.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
@@ -673,13 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/const.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/service.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -711,16 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http_proxy_router/route.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-          <folding>
-            <element signature="e#27#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http_proxy_middleware/http_black_list.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -732,13 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="25" column="76" selection-start-line="25" selection-start-column="76" selection-end-line="25" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/util.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -759,13 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/redis_flow_count.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dao/service_load_balance.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
@@ -773,13 +783,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="9" selection-start-column="9" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/util.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/const.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_proxy_router/route.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+          <folding>
+            <element signature="e#27#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/flow_count_handler.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="74">
+          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
           <folding>
             <element signature="e#23#49#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/redis_flow_count.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="66" column="13" lean-forward="true" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_proxy_middleware/http_flow_count.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
         </state>
       </provider>
     </entry>
